@@ -1,5 +1,0 @@
-{
-    "python.analysis.addImport.exactMatchOnly": false,
-    "python.analysis.addImport.heuristics": false,
-    "python.analysis.autoImportCompletions": false
-}
