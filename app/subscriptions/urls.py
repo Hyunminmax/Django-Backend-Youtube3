@@ -3,9 +3,10 @@ from .      import views
 
 
 
-urlpatterns = {
-    path('',views.SubscriptionList.as_view(), name='sub-list') # api/v1/sub
-}
+urlpatterns = [
+    path('',views.SubscriptionList.as_view(), name='sub-list'), # api/v1/sub
+    path('<int:pk>', views.SubscriptionDetail.as_view(), name='sub-detail') # api/v1/sub/{pk}
+]
 
 
 
