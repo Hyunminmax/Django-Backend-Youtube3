@@ -29,12 +29,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-CUSTOM_USER_APPS = [
-    'users.apps.UsersConfig',
-    'rest_framework',
-    'drf_spectacular'
-]
-
 DJANGO_SYSTEM_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +38,15 @@ DJANGO_SYSTEM_APPS = [
     'django.contrib.staticfiles',
     'core'
 ]
+CUSTOM_USER_APPS = [
+    'users.apps.UsersConfig', # Congif: label 변경할 일이 많다.
+    'videos.apps.VideosConfig',
+    'comments.apps.CommentsConfig',
+    'subscriptions.apps.SubscriptionsConfig',
+    'rest_framework',
+    'drf_spectacular'
+]
+
 
 INSTALLED_APPS = CUSTOM_USER_APPS + DJANGO_SYSTEM_APPS
 
@@ -140,5 +143,5 @@ AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     # YOUR SETTINGS
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema'
 }
