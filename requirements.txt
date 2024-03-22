@@ -6,3 +6,5 @@ djangorestframework>=3.14.0,<4.0.0
 psycopg2-binary>=2.9.9,<3.0
 #DRF-Sepctacular
 drf-spectacular==0.27.1,<0.28.0
+# help Django Chatting Socket Connections
+channels>=4.0.0,<4.0.1
