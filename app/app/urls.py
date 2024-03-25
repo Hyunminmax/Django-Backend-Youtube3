@@ -32,5 +32,6 @@ urlpatterns = [
 
     # REST API
     path('api/v1/video/', include('videos.urls')),
-    path('api/v1/sub/', include('subscriptions.urls'))
+    path('api/v1/sub/', include('subscriptions.urls')),
+    path('api/v1/chat/', include('chat.urls'))
 ]

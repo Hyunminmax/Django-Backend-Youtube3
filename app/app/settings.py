@@ -47,19 +47,25 @@ CUSTOM_USER_APPS = [
     "rest_framework",
     "drf_spectacular",
     "channels",
-    "chat.apps.chatConfig",
+    "chat.apps.ChatConfig",
 ]
 
 
 INSTALLED_APPS = CUSTOM_USER_APPS + DJANGO_SYSTEM_APPS
 
 # Channels를 사용하기 위한 설정
-ASGI_APPLICATION = 'app.routes.application' # Socket과 같은 (비동기처리) + HTTP(동기)
-# FAST API = 비동기 + 동기
-WSGI_APPLICATION = "app.wsgi.application" # HTTP를 base로하는 REST API와 같은 동기 처리
+ASGI_APPLICATION = 'app.route.application' # Socket과 같은 (비동기처리) + HTTP(동기)
 
 # 동기 vs 비동기
+# 웹소켓 채팅을 구성했다 >> 웹소켓의 원리는 무엇인가?
+# HTTP와 웹소켓의 차이점은 무엇인가?
+# HTTP - 연결방식: http://
+# SOCKET - 연결방식: ws://, Hand Shake 양방향 통신이 가능해진다, Low Overhade, Frame(웹소켓에서 데이터를 나누는 단위)
+# STREAMING - 영상 파일은 어떻게 보낼건가? TCP/UDP, 3 ways handshake
 
+
+# FAST API = 비동기 + 동기
+WSGI_APPLICATION = "app.wsgi.application" # HTTP를 base로하는 REST API와 같은 동기 처리
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -155,4 +161,10 @@ AUTH_USER_MODEL = "users.User"
 REST_FRAMEWORK = {
     # YOUR SETTINGS
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"
+}
+
+CHANNEL_LAYERS = {
+    "default":{
+        "BACKEND":"channels.layers.InMemoryChannelLayer"
+    }
 }
