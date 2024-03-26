@@ -39,6 +39,7 @@ DJANGO_SYSTEM_APPS = [
     "core",
 ]
 CUSTOM_USER_APPS = [
+    "daphne",
     "users.apps.UsersConfig",  # Congif: label 변경할 일이 많다.
     "videos.apps.VideosConfig",
     "comments.apps.CommentsConfig",

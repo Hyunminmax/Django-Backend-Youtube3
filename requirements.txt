@@ -1,10 +1,19 @@
 #Django
 django>=5.0.1,<6.0.0 # 5.0.1 이상 6.0.0 미만
+
 #DRF
 djangorestframework>=3.14.0,<4.0.0
+
 #Psycopg2
 psycopg2-binary>=2.9.9,<3.0
+
 #DRF-Sepctacular
 drf-spectacular==0.27.1,<0.28.0
+
 # help Django Chatting Socket Connections
 channels>=4.0.0,<4.0.1
+# 비동기 통신을 위한 다프네
+daphne>=4.1.0,<4.2.0 
+
+# uWSGI
+uwsgi>=2.0.24,<2.1   #GCC 오류의 원인은 C++관련 패키지가 없어서.
