@@ -1,7 +1,8 @@
 version: "3.11"
 
 services:
-  app:# django
+  # app:# django
+  app:
     build:
       context: .
     restart: always
@@ -17,7 +18,8 @@ services:
     depends_on:
       - db
 
-  db:# postgreSQL
+  # db:# postgreSQL
+  db:
     image: postgres:13-alpine
     restart: always
     volumes:
@@ -27,7 +29,8 @@ services:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASS}
 
-  proxy:# nginx
+  # proxy:# nginx
+  proxy:
     build:
       context: ./proxy
     restart: always
