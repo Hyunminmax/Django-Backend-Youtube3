@@ -98,6 +98,7 @@ celerybeat-schedule.*
 *.sage.py 
 
 # Environments 
+테스트용으로 깃에 올리지만 실제로는 절대! 절대!! 절대절대!!! 올리면 안됨. 
 # .env 
 .venv 
 env/ 
