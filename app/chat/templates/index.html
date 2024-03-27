@@ -24,7 +24,7 @@
   });
 
   function fetchChatRooms() {
-    fetch("http://3.37.61.159:8000/api/v1/chat/room/")
+    fetch("http://3.37.61.159/api/v1/chat/room/")
       .then((response) => response.json())
       .then((data) => {
         const roomContainer = document.getElementById("room-container");
@@ -76,7 +76,7 @@
   }
 
   function loadChatRoom(roomId) {
-    fetch(`http://3.37.61.159/:8000/api/v1/chat/${roomId}/messages`)
+    fetch(`http://3.37.61.159/api/v1/chat/${roomId}/messages`)
       .then((response) => response.json())
       .then((messages) => {
         const chatLog = document.getElementById("chat-log");
