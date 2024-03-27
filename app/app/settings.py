@@ -25,7 +25,7 @@ DEBUG = bool(int(os.environ.get('DEBUG', 0))) # 0: False
 ALLOWED_HOSTS = ['*']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 
 # Application definition
