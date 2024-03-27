@@ -76,7 +76,7 @@
   }
 
   function loadChatRoom(roomId) {
-    fetch(`http://127.0.0.1:8000/api/v1/chat/${roomId}/messages`)
+    fetch(`http://3.37.61.159/:8000/api/v1/chat/${roomId}/messages`)
       .then((response) => response.json())
       .then((messages) => {
         const chatLog = document.getElementById("chat-log");
