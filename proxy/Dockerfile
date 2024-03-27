@@ -1,5 +1,5 @@
 FROM nginx:latest
-LABEL maintainer="input-your-name"
+LABEL maintainer="hyunmin"
 
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 COPY ./uwsgi_params /etc/nginx/uwsgi_params
